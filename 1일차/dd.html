@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>웹디자인기능사 메뉴 M-1</title>
+    <link href="https://webfontworld.github.io/gmarket/GmarketSans.css" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        #wrap {
+            position: relative;
+        }
+
+        #header {
+            width: 100%;
+            height: 90px;
+            display: flex;
+            background-color: #b6174b;
+            z-index: 2;
+        }
+
+        #header #logo {
+            margin: 1% 20%;
+            width: 30px;
+        }
+
+        #header #nav1 {
+            width: 40%;
+        }
+
+        #header #nav2 {
+            color: #b6174b;
+            color: white;
+        }
+
+        #menu {
+            width: 100%;
+            height: 56px;
+            background-color: white;
+            display: flex;
+            justify-content: center;
+            z-index: 9999; /* 메뉴가 이미지 위에 오도록 설정 */
+            position: relative; /* 위치를 상대적으로 설정 */
+        }
+
+        #menu > ul {
+            display: flex;
+            justify-content: right;
+            margin-top: 30px;
+        }
+
+        #menu > ul > li {
+            position: relative;
+        }
+
+        #menu > ul > li > a {
+            display: inline-block;
+            padding: 10px 50px;
+            background-color: #b0b0b0;
+        }
+
+        #menu > ul > li > a:hover {
+            background-color: #696969;
+        }
+
+        #menu > ul > li > ul {
+            position: absolute;
+            left: 0;
+            top: 38px;
+            background-color: #c7c7c7;
+            width: 100%;
+            text-align: center;
+            z-index: 9999; /* 서브메뉴가 이미지 위에 오도록 설정 */
+            display: none; /* 기본적으로 숨겨둠 */
+        }
+
+        #menu > ul > li:hover > ul {
+            display: block; /* 부모 요소(li)에 마우스를 올리면 서브메뉴를 보여줌 */
+        }
+
+        #menu > ul > li > ul > li > a {
+            display: inline-block;
+            padding: 10px;
+            background-color: #c1c1c1;
+            width: 100%;
+            box-sizing: border-box;
+        }
+
+        #menu > ul > li > ul > li > a:hover {
+            background-color: #8f8f8f;
+        }
+
+        #slider #main {
+            width: 100%;
+            height: 600.94px;
+            position: relative;
+            z-index: 0;
+        }
+
+        .imglist-container {
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+
+        .imglist {
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            top: 0;
+            left: 0;
+            opacity: 0;
+            transition: opacity 1s;
+            z-index: 1;
+        }
+
+        #main2 {
+            width: 100%;
+            height: 118px;
+            background-color: black;
+        }
+
+        #img2 {
+            margin-left: 20%;
+            color: white;
+            display: flex;
+        }
+
+        .img1 {
+            margin-top: 1.2%;
+            margin-right: 3.2%;
+            padding-right: 9.4%;
+        }
+
+        .d {
+            margin-left: 5.7%;
+        }
+
+        #container1 {
+            width: 100%;
+            height: 1066.34px;
+            background-color: white;
+        }
+
+        #container2 {
+            width: 100%;
+            height: 679.88px;
+            background-color: aquamarine;
+        }
+
+        #container3 {
+            height: 692.06px;
+            width: 100%;
+            background-color: turquoise;
+        }
+
+        #under {
+            height: 307px;
+            width: 100%;
+            background-color: cadetblue;
+        }
+
+        #footer {
+            height: 255px;
+            width: 100%;
+            background-color: teal;
+        }
+    </style>
+</head>
+<body>
+    <div id="wrap">
+        <div id="header">
+            <div id="logo">
+                <img src="https://6skinsuae.com/wp-content/uploads/2023/09/logo-whhite-1.png" width="288" height="55.03" id="logo_img1" class="genylux">
+            </div>
+            <div id="nav1">
+                <input type="search" id="search" placeholder="찾다" style="width: 310px; height: 38px; border: 0.5px solid #dbaf42 !important; border-radius: 5px; background-color: #b6174b; margin: 3.5% 0% 0% 3%; display: inline-block; color: white;">
+                <button type="button" style="width: 38px; height: 38px; border: 2px solid #dbaf42 !important; border-radius: 0; background-color:#dbaf42; margin-top: 2%; display: inline-block; vertical-align: -12px;"></button>
+            </div>
+            <div id="nav2"></div>
+        </div>
+        <div id="menu">
+            <ul>
+                <li id="lis"><a href="#">집</a>
+                    <ul class="submenu">
+                        <li><a href="#">서브메뉴1-1</a></li>
+                        <li><a href="#">서브메뉴1-2</a></li>
+                        <li><a href="#">서브메뉴1-3</a></li>
+                    </ul>
+                </li>
+                <li><a href="#">가게</a>
+                    <ul class="submenu">
+                        <li><a href="#">서브메뉴2-1</a></li>
+                        <li><a href="#">서브메뉴2-2</a></li>
+                        <li><a href="#">서브메뉴2-3</a></li>
+                    </ul>
+                </li>
+                <li><a href="#">카테고리</a>
+                    <ul class="submenu">
+                        <li><a href="#">의류</a></li>
+                        <li><a href="#">신발</a></li>
+                        <li><a href="#">액세서리</a></li>
+                        <li><a href="#">가방</a></li>
+                    </ul>
+                </li>
+                <li><a href="#">브랜드</a>
+                    <ul class="submenu">
+                        <li><a href="#">서브메뉴4-1</a></li>
+                        <li><a href="#">서브메뉴4-2</a></li>
+                        <li><a href="#">서브메뉴4-3</a></li>
+                    </ul>
+                </li>
+                <li><a href="#">블로그</a>
+                    <ul class="submenu">
+                        <li><a href="#">서브메뉴5-1</a></li>
+                        <li><a href="#">서브메뉴5-2</a></li>
+                        <li><a href="#">서브메뉴5-3</a></li>
+                    </ul>
+                </li>
+                <li><a href="#">판매</a>
+                    <ul class="submenu">
+                        <li><a href="#">서브메뉴6-1</a></li>
+                        <li><a href="#">서브메뉴6-2</a></li>
+                        <li><a href="#">서브메뉴6-3</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+        <script>
+            window.onload = function () {
+                let navList = document.querySelectorAll("#menu > ul > li");
+                navList.forEach(function (navItem) {
+                    navItem.addEventListener("mouseover", function () {
+                        this.querySelector("ul").style.height = "auto";
+                    });
+                    navItem.addEventListener("mouseout", function () {
+                        this.querySelector("ul").style.height = "0";
+                    });
+                });
+            }
+        </script>
+        <script>
+            window.addEventListener('scroll', function () {
+                var header = document.getElementById('header');
+                var menu = document.getElementById('menu');
+                var sliderMain = document.getElementById('main');
+                if (window.scrollY > 200) {
+                    menu.style.position = 'fixed';
+                    header.style.position = 'fixed';
+                    header.style.top = "0";
+                    menu.style.top = "90px";
+                    sliderMain.style.marginTop = '146px';
+                } else {
+                    header.style.position = 'relative';
+                    menu.style.position = 'relative';
+                    menu.style.top = "0"
+                    sliderMain.style.marginTop = '0';
+                }
+            });
+        </script>
+        <div id="slider">
+            <div id="main" class="imglist-container">
+                <img src="img/제니럭스 1.webp" class="imglist" style="width: 100%; height: 605.94px; z-index: 1;">
+                <img src="img/제니럭스 2.webp" class="imglist" style="width: 100%; height: 605.94px; z-index: 1;">
+                <img src="img/제니럭스 3.webp" class="imglist" style="width: 100%; height: 605.94px; z-index: 1;">
+                <img src="img/제니럭스 4.webp" class="imglist" style="width: 100%; height: 605.94px; z-index: 1;">
+            </div>
+        </div>
+        <script>
+            window.onload = function () {
+                let currentIndex = 0;
+                const slider = document.querySelectorAll(".imglist");
+                slider[currentIndex].style.opacity = "1";
+                setInterval(() => {
+                    let nextIndex = (currentIndex + 1) % slider.length;
+                    slider[currentIndex].style.opacity = "0";
+                    slider[nextIndex].style.opacity = "1";
+                    currentIndex = nextIndex;
+                }, 3000);
+            }
+        </script>
+    </div>
+</body>
+</html>

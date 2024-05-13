@@ -1,0 +1,95 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+#wrap {
+  position: relative;
+}
+
+#header {
+  width: 100%;
+  height: 90px;
+  display: flex;
+  background-color: #b6174b;
+  z-index: 2;
+}
+
+#header #logo {
+  margin: 1% 20%;
+  width: 30px;
+}
+
+#header #nav1 {
+  width: 40%;
+}
+
+#header #nav2 {
+  color: #b6174b;
+  color: white;
+}
+
+#menu {
+  width: 100%;
+  height: 56px;
+  background-color: white;
+  display: flex;
+  justify-content: center;
+  z-index: 9999; /* 메뉴가 이미지 위에 오도록 설정 */
+  position: relative; /* 위치를 상대적으로 설정 */
+
+}
+#menu ul, #menu li {
+  list-style-type: none;
+}
+#menu a {
+  text-decoration: none; /* 밑줄 제거 */
+  color: black; /* 텍스트 색상을 검은색으로 설정 */
+}
+#menu > ul {
+  margin-top: 10px;
+  display: flex;
+  justify-content: right;
+
+}
+
+#menu > ul > li {
+  position: relative;
+}
+
+#menu > ul > li > a {
+  display: inline-block;
+  padding: 10px 35px;
+
+}
+
+#menu > ul > li > a:hover {
+  background-color: white;
+}
+
+#menu > ul > li > ul {
+  position: absolute;
+  left: 0;
+  top: 38px;
+  background-color:white;
+  width: 100%;
+  text-align: center;
+  z-index: 9999; /* 서브메뉴가 이미지 위에 오도록 설정 */
+  display: none; /* 기본적으로 숨겨둠 */
+}
+
+#menu > ul > li:hover > ul {
+  display: block; /* 부모 요소(li)에 마우스를 올리면 서브메뉴를 보여줌 */
+}
+
+#menu > ul > li > ul > li > a {
+  display: inline-block;
+  padding: 10px;
+  background-color: white;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+#menu > ul > li > ul > li > a:hover {
+  background-color: #ffc107;
+}
