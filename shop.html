@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="header.css" />
+    <link rel="stylesheet" href="css/shop_body.css">
+    <link rel="stylesheet" href="footer.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+
+<body>
+    <div id= "wrap">
+        
+        <div id="header">
+            <div id="logo">
+                <img  id="logoimgs" src="https://6skinsuae.com/wp-content/uploads/2023/09/logo-whhite-1.png">
+            </div>
+
+            <div id="nav1">
+                <div id="header_search">
+                    <input class="header_search"  type="text" placeholder="찾다">
+                    <button class="header_button" type="button" >검색</button>
+                </div>
+            </div>
+            <div id="nav2">
+                <div id="nav2_account">ACCOUNT
+                    <div id="accountMenu">
+                        <a href="#">로그인</a>
+                        <a href="#">회원가입</a>
+                    </div>
+                </div>
+
+                <div style="font-size: 25px;">♡</div>
+                <img style="width: 24px; height: 24px;" src="https://6skinsuae.com/wp-content/uploads/2022/03/bag.png">
+                <div>AED</div>
+                <div>English</div>
+            </div>
+        </div>
+
+        <div style="background-color:#f2f2f2;" id="menu">
+            <ul>
+                <li id="lis"><a href="#" style="margin-left: 50px; ">집</a>
+                </li>
+                <li><a style="color: brown;font-weight: bold;" href="#">가게</a>
+
+                </li>
+                <li><a href="#">카테고리▼</a>
+                    <ul class="submenu">
+                        <li><a href="#">의류</a></li>
+                        <li><a href="#">신발</a></li>
+                        <li><a href="#">액세서리</a></li>
+                        <li><a href="#">가방</a></li>
+                    </ul>
+                </li>
+                <li><a href="#">브랜드▼</a>
+                    <ul class="submenu">
+                        <li><a href="#">서브메뉴4-1</a></li>
+                        <li><a href="#">서브메뉴4-2</a></li>
+                        <li><a href="#">서브메뉴4-3</a></li>
+                    </ul>
+                </li>
+                <li><a href="#">블로그</a>
+
+                </li>
+                <li><a href="#">판매▼</a>
+                    <ul class="submenu">
+                        <li><a href="#">서브메뉴6-1</a></li>
+                        <li><a href="#">서브메뉴6-2</a></li>
+                        <li><a href="#">서브메뉴6-3</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+        <script>
+            window.onload = function(){
+                let navList = document.querySelectorAll("#menu > ul > li");
+                
+                navList.forEach(function(navItem){
+                    navItem.addEventListener("mouseover", function(){
+                        this.querySelector("ul").style.height = "auto";
+                    });
+                    navItem.addEventListener("mouseout", function(){
+                        this.querySelector("ul").style.height = "0";
+                    });
+                });
+            }
+        </script>
+        
+
+
+        
+        <script>
+            window.addEventListener('scroll', function () {
+                var header = document.getElementById('header');
+                var menu = document.getElementById('menu');
+                var sliderMain = document.getElementById('main');
+                if (window.scrollY > 200) { // 스크롤이 200px 이상 내려갔을 때
+                    menu.style.position = 'fixed'; // menu를 상단에 고정
+                    header.style.position = 'fixed'; // header를 상단에 고정
+                    header.style.top = "0";
+                    menu.style.top = "90px";
+                    sliderMain.style.marginTop = '146px'; // slider를 상단에 고정된 header와 menu만큼 아래로 이동
+                } else { // 스크롤이 200px 미만으로 올라왔을 때
+                    header.style.position = 'relative'; // header를 원래 위치로 설정
+                    menu.style.position = 'relative'; // menu를 원래 위치로 설정
+                    menu.style.top = "0"
+                    sliderMain.style.marginTop = '0'; // slider를 원래 위치로 설정
+                }
+            });
+        </script>
+
+
+
+        <div id="back_button">
+            <a href="index.html">Home</a>
+              >   
+            <a href="#">Shop</a>
+        </div>
+
+
+        <div id="shop">  
+            <div id="chaking">
+                <h2 class="chaking_text">Shop by</h2>
+
+                <div class="chaking_list">
+                    <p style="margin-bottom: 20px;" >CATEGORY</p>
+                    <div>
+                        <label class="checkbox">
+                            <input type="checkbox" name="option1" value="Option 1">
+                            body core
+                        </label><br>
+                        <label class="checkbox">
+                            <input type="checkbox" name="option1" value="Option 1">
+                            body core
+                        </label><br>
+                        <label class="checkbox">
+                            <input type="checkbox" name="option1" value="Option 1">
+                            body core
+                        </label><br>
+                        <label class="checkbox">
+                            <input type="checkbox" name="option1" value="Option 1">
+                            body core
+                        </label><br>
+                        <label class="checkbox">
+                            <input type="checkbox" name="option1" value="Option 1">
+                            body core
+                        </label><br>
+                        <label class="checkbox">
+                            <input type="checkbox" name="option1" value="Option 1">
+                            body core
+                        </label><br>
+                        <label class="checkbox">
+                            <input type="checkbox" name="option1" value="Option 1">
+                            body core
+                        </label><br>
+                        <label class="checkbox">
+                            <input type="checkbox" name="option1" value="Option 1">
+                            body core
+                        </label><br>
+                        <label class="checkbox">
+                            <input type="checkbox" name="option1" value="Option 1">
+                            body core
+                        </label><br>
+                        <label class="checkbox">
+                            <input type="checkbox" name="option1" value="Option 1">
+                            body core
+                        </label><br>
+                        <label class="checkbox">
+                            <input type="checkbox" name="option1" value="Option 1">
+                            body core
+                        </label><br>
+                    </div>
+                    <div>
+                        <p style="margin: 35px 0 20px; padding-bottom: 13px; border-bottom: solid 2px black;">PRICE</p>
+                        <span class="multi-range">
+                            <input type="range" min="0" max="800" value="0" id="lower">
+                        </span>
+                    </div>
+                    <div>
+                        <p style="margin: 35px 0 20px; padding-bottom: 13px; border-bottom: solid 2px black;">BRANDS</p>
+                        <label class="checkbox">
+                            <input type="checkbox" name="option1" value="Option 1">
+                            body core
+                        </label><br>
+                        <label class="checkbox">
+                            <input type="checkbox" name="option1" value="Option 1">
+                            body core
+                        </label><br>
+                        <label class="checkbox">
+                            <input type="checkbox" name="option1" value="Option 1">
+                            body core
+                        </label><br>
+                        <label class="checkbox">
+                            <input type="checkbox" name="option1" value="Option 1">
+                            body core
+                        </label><br>
+                        <label class="checkbox">
+                            <input type="checkbox" name="option1" value="Option 1">
+                            body core
+                        </label><br>
+                        <label class="checkbox">
+                            <input type="checkbox" name="option1" value="Option 1">
+                            body core
+                        </label><br>
+                        <label class="checkbox">
+                            <input type="checkbox" name="option1" value="Option 1">
+                            body core
+                        </label><br>
+                        <label class="checkbox">
+                            <input type="checkbox" name="option1" value="Option 1">
+                            body core
+                        </label><br>
+                    </div>
+                    <div>
+                        <p style="margin: 35px 0 20px; padding-bottom: 13px; border-bottom: solid 2px black;">COLLECTIONS</p>
+                        <label class="checkbox">
+                            <input type="checkbox" name="option1" value="Option 1">
+                            body core
+                        </label><br>
+                        <label class="checkbox">
+                            <input type="checkbox" name="option1" value="Option 1">
+                            body core
+                        </label><br>
+                        <label class="checkbox">
+                            <input type="checkbox" name="option1" value="Option 1">
+                            body core
+                        </label><br>
+                        <label class="checkbox">
+                            <input type="checkbox" name="option1" value="Option 1">
+                            body core
+                        </label><br>
+                    </div>
+                </div>
+
+            </div>
+
+            <div id="shop_list">
+                <div>
+                    <h1 style="font-size: 42px;font-weight:200;margin-bottom:8px;">Shop</h1>
+                    <div div id="shop_list_in">
+                    <div class="shop_img">
+                        <img src="https://6skinsuae.com/wp-content/uploads/2024/04/6skins-set-2-350x350.jpg">
+                        <div class="shop_img_text">
+                            <p style="margin-bottom: 24px;">
+                                6skins Skincare Set       
+                            </p>
+                            <span>⭐⭐⭐⭐⭐</span>
+                            <p>AED 317.00.AED 236.00</p>
+                        </div>
+                    </div>
+                    <div class="shop_img">
+                        <img src="https://6skinsuae.com/wp-content/uploads/2024/04/6skins-set-2-350x350.jpg">
+                        <div class="shop_img_text">
+                            <p style="margin-bottom: 24px;">
+                                6skins Skincare Set       
+                            </p>
+                            <span>⭐⭐⭐⭐⭐</span>
+                            <p>AED 317.00.AED 236.00</p>
+                        </div>
+                    </div>
+                    <div class="shop_img">
+                        <img src="https://6skinsuae.com/wp-content/uploads/2024/04/6skins-set-2-350x350.jpg">
+                        <div class="shop_img_text">
+                            <p style="margin-bottom: 24px;">
+                                6skins Skincare Set       
+                            </p>
+                            <span>⭐⭐⭐⭐⭐</span>
+                            <p>AED 317.00.AED 236.00</p>
+                        </div>
+                    </div>
+
+
+                    
+                </div>
+                </div>
+
+                <div></div>
+            </div>
+
+        </div>
+
+
+        
+
+
+
+        
+        <div id="footer">
+            <div class="footer1">
+                <img style="width:160px; height:30px; margin-bottom: 10px;" src="https://6skinsuae.com/wp-content/uploads/2023/09/logo-whhite-1.png">
+                <div style="font-size: 13px;">
+                    6Skins에서는 피부 자신감을 중요하게 생각합니다. 이것이 바로 우리가 귀하가 원하는 피부 톤과 색조를 얻을 수 있도록 돕기 위해 여기 있는 이유입니다.Skins 온라인 쇼핑 플랫폼은 UAE 최고의 피부... 
+                    <a style="color: #ffc107;" href="#">더 알아보기</a>
+                </div>
+                <div></div>
+            </div>
+
+            <div class="footer2">
+                <h2>회사</h2>
+                <ul class="footer_body">
+                    <li>
+                        회사소개
+                    </li>
+                    <li>
+                        연락하다
+                    </li>
+                    <li>
+                        블로그
+                    </li>
+                    <li>
+                        FAQ
+                    </li>
+                </ul>
+            </div>
+
+            <div class="footer2">
+                <h2>인기 브랜드</h2>
+                <ul class="footer_body">
+                    <li>
+                        6스킨
+                    </li>
+                    <li>
+                        스네일화이트
+                    </li>
+                    <li>
+                        퓨리토 서울
+                    </li>
+                    <li>
+                        더말로지카
+                    </li>
+                    <li>
+                        노란 장미
+                    </li>
+                </ul>
+            </div>
+
+            <div class="footer2">
+                <h2>빠른링크</h2>
+                <ul class="footer_body">
+                    <li>
+                        개인 정보 정책
+                    </li>
+                    <li>
+                        배송정보
+                    </li>
+                    <li>
+                        이용약관
+                    </li>
+                    <li>
+                        보고
+                    </li>
+                </ul>
+            </div>
+
+            <div class="footer1">
+                <h2>빠른링크</h2>
+                <ul style="list-style-type: disc; " class="footer_body">
+                    <li>
+                        사무실 1901B, The Dome Tower, Cluster N, Jumeirah Lakes Towers, 두바이, 아랍에미리트
+                    </li>
+                    <li>
+                        +97142545868
+                    </li>
+                    <li>
+                        +971507847566
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+
+
+        <div id="footer_end">
+            <div id="footer_end_1">
+                <div id="footer_end_2">
+                    2024 copyright @ 6Skinsuae. ALL rights reserved.
+                </div>
+                <div id="footer_end_3">
+                    Poyments Secured By
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+
+</html>

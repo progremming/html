@@ -1,0 +1,87 @@
+/* 기본 스타일링 */
+#back_button{
+    width: 1330px;
+    margin: auto;
+    padding: 17px 12px;
+    margin-top: 17px;
+}
+
+#shop{
+    display: flex;
+    width: 1320px;
+    margin: 0 auto;
+    margin-top: 35px;
+}
+
+#chaking{
+    width: 330px;
+    height: 1348px;
+    padding: 0px 8px;
+}
+
+.chaking_text{
+    color: black;
+    font-size: 19.68px !important;
+}
+
+.chaking_list{
+    width: 100%;
+    height: 880px;
+    margin-top: 15px;
+    padding: 24px;
+    background-color: #f2f2f2;
+    overflow-y: scroll; /* 스크롤바 항상 표시 */
+    scroll-snap-type: y mandatory;
+}
+
+#shop_list{
+    width: 968px;
+    height: 1348px; /* 중복된 height 속성을 제거하고 올바른 높이로 수정 */
+    padding: 0px 4px;
+}
+
+#shop_list_in{
+    display: flex;
+    flex-wrap: wrap wrap;
+}   
+
+.checkbox input{
+    margin-bottom: 15px;
+}
+
+/* 스크롤바를 항상 표시하는 추가 스타일 */
+.chaking_list::-webkit-scrollbar {
+    width: 12px; 
+}
+
+.chaking_list::-webkit-scrollbar-track {
+    background: #f2f2f2; /* 스크롤바 트랙 배경색 */
+}
+
+.chaking_list::-webkit-scrollbar-thumb {
+    background-color: #b6174b; /* 스크롤바 색상 */
+    border-radius: 10px; /* 스크롤바 모서리 둥글게 */
+    border: 3px solid #f2f2f2; /* 스크롤바와 트랙 사이 여백 색상 */
+}
+
+
+.shop_img {
+    width: 300px;
+    height: 460px;
+    text-align: center;
+    box-shadow: 0 0 0 0.1px black;
+    padding: 0 0 16px;
+    margin-bottom: 8px;
+    margin: 8px;
+}
+
+.shop_img img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain; /* 이미지 비율을 유지하며 컨테이너 안에 맞춤 */
+}
+
+.shop_img_text {
+    padding: 16px 32px 0px;
+    height: 157PX;
+}

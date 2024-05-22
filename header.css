@@ -1,0 +1,399 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; /* 모든 요소에 박스 모델 적용 */
+}
+
+html, body {
+    width: 100%;
+    overflow-x: hidden;
+}
+
+#wrap {
+    position: relative;
+}
+
+#header {
+    width: 100%;
+    display: flex;
+    background-color: #b6174b;
+    z-index: 2;
+    padding: 15px 0px;
+    justify-content: center; /* 수평 가운데 정렬 */
+    align-items: center; /* 수직 가운데 정렬 */
+    flex-wrap: wrap; /* 요소들이 여러 줄로 배치될 수 있도록 함 */
+    height: 90px;
+}
+
+#logoimgs {
+    padding-top: 5px;
+    width: 245px;
+    height: 46.81px;
+    margin: auto;
+}
+#nav1{
+    margin-left: -50px;
+}
+#header_search {
+    margin-left: 40px;
+}
+
+#header_search input[type="text"]::placeholder {
+    color: white; /* placeholder의 색상을 회색으로 설정합니다. */
+    padding-left: 10px;
+}
+
+
+#nav2 {
+    width: 410px;
+    display: flex;
+    align-items: center; /* 요소들을 수직으로 가운데 정렬합니다. */
+    height: 40px;
+    position: relative;
+
+}
+
+
+#accountMenu {
+    display: none;
+    position: absolute;
+    background-color: #b6174b;
+    min-width: 100px;
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+    top: 30px;
+    padding: 12px;
+    z-index: 9999;
+    border-radius: 4px;
+    left: -0.5px;
+
+}
+
+#nav2_account:hover #accountMenu {
+    display: block;
+}
+
+
+#accountMenu a {
+
+    text-align: center;
+    display: block;
+    color: white;
+    text-decoration: none;
+    margin-bottom: 10px; /* 각 링크 아래에 10px의 여백을 추가합니다 */
+    padding-bottom: 10px;
+    border-bottom: 1px solid white; /* 각 링크의 아래쪽에 1px의 흰색 선을 추가합니다 */
+}
+
+#accountMenu a:last-child {
+    border-bottom: none; /* 마지막 링크에는 선을 추가하지 않습니다 */
+    margin-bottom: -3px;
+
+}
+
+
+
+#nav2 > div {
+    margin: 0 20px; /* 각 요소들 사이의 좌우 여백을 조정합니다. */
+    color: white;;
+}
+
+
+#header_input {
+    display: flex;
+    border: 1px solid #ffc107;
+}
+
+.header_search {
+    width: 17vw;
+    height: 38px;
+}
+
+.header_button {
+    width: 41px;
+    background-color: #ffc107;
+    height: 38px;
+}
+
+#search input[type="text"],
+#search button {
+    margin-right: 0px; /* 원하는 간격으로 조정할 수 있습니다. */
+    margin-left: 10px;
+}
+
+#header_search input[type="text"] {
+    margin-right: -5px; /* 원하는 간격으로 조정할 수 있습니다. */
+    border: 1px solid #ffc107;
+    background-color: #b6174b;
+    color: white;
+}
+
+#search button {
+    border-radius: 0 20px 20px 0; /* 오른쪽 모서리만 둥글게 설정 */
+    border-width: 1px;
+}
+
+
+/* 해상도가 1450px 이상인 경우 */
+@media (min-width: 1450px) {
+    #header #logo > img {
+        margin-right: 300px; /* 해상도에 따라 조절하려는 값 */
+    }
+}
+
+/* 해상도가 1210px 이상 1450px 미만인 경우 */
+@media (min-width: 1210px) and (max-width: 1449px) {
+    #header #logo > img {
+        margin-right: 150px; /* 해상도에 따라 조절하려는 값 */
+    }
+}
+
+/* 해상도가 1210px 이하인 경우 */
+@media (max-width: 1209px) {
+    #header #logo > img {
+        margin-right: 0px; /* 초기값 */
+
+    }
+    #header #nav1 {
+        margin-left: -20px;
+    }
+}
+
+/* 해상도가 999px 이하 800px 이상인 경우 */
+@media (min-width: 811px) and (max-width: 999px) {
+    #logoimgs{
+        width: 150px;
+        height: 35px;
+    }
+    #header {
+        align-items: center; /* 가로 중앙 정렬 */
+        padding-top: 5px;
+    }
+    #logo{
+        width: 20%;
+        margin-left: 13%;
+    }
+    #nav1{
+        order: 1; /* nav2를 로고 위로 이동시킴 */
+        width: 90vw;
+
+    }
+    #nav2{
+        margin: auto; 
+    }
+
+    #header_search > input {
+        margin-left:5%;
+        width: 80%; /* 검색창 크기 조정 */
+        height: 33px;
+    }
+
+    .header_button {
+        width: 40px; /* 버튼 크기 조정 */
+        height: 37px;
+    }
+    
+    #menu {
+        display: none;
+    }
+}
+
+
+/* 해상도가 800px 이하인 경우 */
+@media (max-width: 810px) and (min-width: 481px) {
+
+    #logoimgs{
+        width: 150px;
+        height: 35px;
+        
+    }
+    #logo{
+        width: 20%;
+        margin-left: 8%;
+    }
+
+    #nav1{
+        order: 1; /* nav2를 로고 위로 이동시킴 */
+        width: 85vw;
+    }
+    #nav2{
+        margin: auto;
+    }
+    #header{
+        padding-top: 5px;
+
+    }
+    #header_search{
+        width: 100%;
+        margin: 0 auto;
+        text-align: center; /* 내부의 텍스트를 수평으로 가운데 정렬합니다. */
+
+    }
+    #header_search > input {
+        width: 88%; /* 검색창 크기 조정 */
+        height: 38px;
+
+    }
+
+    .header_button {
+        width: 44px; /* 버튼 크기 조정 */
+        height: 40px;
+    }
+    #nav2 {
+        width: 40%;
+        justify-content: right;
+    }
+    #nav2 > div {
+        display: none; 
+        justify-content: right;
+    }
+
+}
+
+
+
+/* 모바일 해상도가 480px 이하인 경우 */
+@media (max-width: 480px) {
+    #header{
+        height: 120px;
+    }
+    #logo{
+        width: 10vw;
+ 
+    }
+    #logo > img{
+        width: 160px;
+        height: 35px;
+    }
+
+    #header {
+        justify-content: baseline;
+        margin: auto;
+    }
+
+    #logo{
+        width: 20%;
+        margin-left: 10%;
+    }
+
+    #nav1{
+        order: 1; /* nav2를 로고 위로 이동시킴 */ 
+        width: 95vw;
+    }
+    #nav2{
+        width: 160px;
+        margin: auto;
+    }
+    
+    #header_search > input {
+        width: 80%; /* 검색창 크기 조정 */
+        height: 33px;
+    }
+
+    .header_button {
+        width: 40px; /* 버튼 크기 조정 */
+        height: 37px;
+    }
+    #nav2 {
+        width: 40%;
+        justify-content: right;
+    }
+    #nav2 > div {
+        display: none; 
+
+    }
+
+}
+
+
+
+#menu {
+    width: 100%;
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    z-index: 10; /* 메뉴가 이미지 위에 오도록 설정 */
+    position: relative; /* 위치를 상대적으로 설정 */
+}
+
+#menu ul,
+#menu li {
+    list-style-type: none;
+}
+
+#menu a {
+    text-decoration: none; /* 밑줄 제거 */
+    color: black; /* 텍스트 색상을 검은색으로 설정 */
+}
+
+#menu > ul {
+    display: flex;
+    justify-content: center;
+}
+
+#menu > ul > li {
+    position: relative;
+    margin-right: 62px; /* 각 메뉴 항목 사이의 간격 조절 */
+    font-size: 16px;
+    font-weight: 500;
+}
+
+#menu > ul > li > a {
+    display: inline-block;
+    padding: 18px 0px;
+}
+
+#menu > ul > li > a:hover {
+    background-color: white;
+}
+
+#menu > ul > li > ul {
+    position: absolute;
+    left: 0;
+    top: 100%; /* 부모 메뉴 아래에 위치하도록 조정 */
+    background-color: white;
+    width: 140px;
+    z-index: 9999;
+    display: none;
+}
+
+#menu > ul > li:hover > ul {
+    display: block; /* 부모 요소(li)에 마우스를 올리면 서브메뉴를 보여줌 */
+}
+
+#menu > ul > li > ul > li > a {
+    display: inline-block;
+    padding: 10px;
+    background-color: white;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+#menu > ul > li > ul > li > a:hover {
+    background-color: #ffc107;
+}
+
+/* 해상도가 1450px 이상인 경우 */
+@media (min-width: 1000px) {
+    #menu {
+        display: flex;
+    }
+}
+
+/* 해상도가 1210px 이하인 경우 */
+@media (max-width: 999px) {
+    #menu {
+        display: none;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+

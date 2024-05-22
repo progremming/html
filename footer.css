@@ -1,0 +1,94 @@
+#footer {
+
+    width: 100%;
+    background-color:#b6174b;
+    display: flex;
+    justify-content: center;
+    padding: 30px 0px 20px;
+    color: white;
+}
+#footer .footer1{
+    width: 305px;
+    height: 205px;
+    padding: 0px 12px;
+
+
+}
+#footer .footer2{
+    width: 195px;
+    height: 205px;
+    padding: 0px 12px;
+}
+.footer_body{
+    padding: 20px 0px 10px;
+
+    list-style-type: none;
+}
+.footer_body > li{
+    margin: 0px 0px 8px;
+    font-size: 15px;
+}
+
+
+@media (min-width: 1450px) {
+    #footer .footer1 {
+        width: 305px;
+        height: 205px;
+    }
+    #footer .footer2{
+        width: 195px;
+        height: 205px;
+    }
+}
+
+@media (min-width: 1210px) and (max-width: 1449px) {
+    #footer .footer1 {
+        width: 265px;
+        height: 205px;
+    }
+    #footer .footer2{
+        width: 170px;
+        height: 205;
+    }
+}
+
+/* 해상도가 1450px 미만인 경우 */
+@media (max-width: 1209px) {
+    #footer .footer1 {
+        width: 220px;
+        height: 205px;
+    }
+    #footer .footer2{
+        width: 140px;
+        height: 205px;
+    }
+    #nons{
+        display: block;
+    }
+}
+
+
+
+
+
+#footer_end {
+    background-color: #231f20;
+    color: white;
+    padding: 10px 12px;
+    display: flex;
+    align-items: center; /* 요소를 세로로 가운데 정렬합니다 */
+}
+
+#footer_end_1 {
+    display: flex;
+    justify-content: space-between; /* 왼쪽과 오른쪽 끝으로 요소를 정렬합니다 */
+    width: 100%; /* 전체 너비를 차지하도록 설정합니다 */
+}
+
+
+#footer_end_1 > #footer_end_2 {
+    margin-left:  15%; /* 각 요소에 왼쪽과 오른쪽으로 10px의 마진을 부여합니다 */
+}
+#footer_end_1 > #footer_end_3 {
+    margin-right:  15%; /* 각 요소에 왼쪽과 오른쪽으로 10px의 마진을 부여합니다 */
+}
